@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import java.net.URL?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospiflow1.PatientsController">
+    <stylesheets>
+        <URL value="@patients.css" />
+    </stylesheets>
+   <children>
+      <Line endX="434.33331298828125" layoutX="131.0" layoutY="37.0" startX="-95.66665649414062" strokeWidth="1.5">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#177bbe" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#1855a1" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="421.66668701171875" layoutX="143.0" layoutY="369.0" startX="-108.873779296875" startY="0.20709228515625" strokeWidth="1.5">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#1855a1" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="-96.16665649414062" endY="-49.5" layoutX="131.0" layoutY="86.0" startX="-97.58090209960938" startY="283.103515625" strokeWidth="1.5">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#1855a1" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="209.16668701171875" endY="240.5" layoutX="356.0" layoutY="128.0" startX="209.83331298828125" startY="-91.5" strokeWidth="1.5">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#1855a1" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="351.0" layoutY="114.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/patient%20(3).png" />
+         </image>
+         <effect>
+            <DropShadow color="#4a86da" height="115.88" radius="60.405" width="127.74" />
+         </effect>
+      </ImageView>
+      <Label layoutX="199.0" layoutY="59.0" text=" Patient Registration" textFill="#021328">
+         <font>
+            <Font name="Bell MT Bold" size="24.0" />
+         </font>
+         <effect>
+            <DropShadow color="#6298d1" height="36.81" radius="28.7775" width="80.3" />
+         </effect>
+      </Label>
+      <PasswordField fx:id="passwordp" layoutX="82.0" layoutY="264.0" onAction="#createAccount" prefHeight="35.0" prefWidth="200.0" promptText="Password" />
+      <TextField fx:id="firstNamep" layoutX="82.0" layoutY="127.0" onAction="#createAccount" prefHeight="35.0" prefWidth="200.0" promptText="First Name" />
+      <JFXComboBox fx:id="genderp" layoutX="326.0" layoutY="264.0" onAction="#initialize" prefHeight="35.0" prefWidth="200.0" promptText="Gender" />
+      <TextField fx:id="lastNamep" layoutX="82.0" layoutY="172.0" onAction="#createAccount" prefHeight="35.0" prefWidth="200.0" promptText="Last Name" />
+      <JFXButton fx:id="createAccountButton" layoutX="187.0" layoutY="312.0" onAction="#createAccount" prefHeight="38.0" prefWidth="227.0" ripplerFill="#4682eb" styleClass="createAccountButton" stylesheets="@../Desine/patients.css" text="Registration">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="WHITE" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </textFill>
+      </JFXButton>
+      <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="43.0" layoutY="331.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/icons8-enter-80.png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="43.0" layoutY="331.0" onAction="#returnLoginPage" prefHeight="30.0" prefWidth="30.0" text=" " />
+      <TextField fx:id="emailp" layoutX="82.0" layoutY="217.0" onAction="#createAccount" prefHeight="35.0" prefWidth="200.0" promptText="Email" />
+   </children>
+</AnchorPane>

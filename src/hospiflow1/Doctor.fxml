@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospiflow1.DoctorController">
+    <children>
+        <Label layoutX="216.0" layoutY="49.0" text="Doctor Registration" textAlignment="CENTER">
+            <font>
+                <Font name="System Bold Italic" size="20.0" />
+            </font>
+         <effect>
+            <DropShadow color="#317ac4" height="37.8" radius="23.0975" spread="0.24" width="56.59" />
+         </effect>
+        </Label>
+        <TextField fx:id="firstName" layoutX="47.0" layoutY="108.0" onAction="#handleRegistration" prefHeight="37.0" prefWidth="200.0" promptText="First Name" />
+        <TextField fx:id="lastName" layoutX="47.0" layoutY="152.0" onAction="#handleRegistration" prefHeight="37.0" prefWidth="200.0" promptText="Last Name" />
+        <TextField fx:id="emaildoctor" layoutX="47.0" layoutY="199.0" onAction="#handleRegistration" prefHeight="37.0" prefWidth="200.0" promptText="Email" />
+        <PasswordField fx:id="passworddoctor" layoutX="47.0" layoutY="243.0" onAction="#handleRegistration" prefHeight="37.0" prefWidth="200.0" promptText="Password" />
+        <Button fx:id="registerButton" layoutX="220.0" layoutY="308.0" minWidth="30.0" mnemonicParsing="false" onAction="#handleRegistration" prefHeight="37.0" prefWidth="184.0" styleClass="createAccountButton" stylesheets="@../Desine/doctor.css" text="Register" />
+      <Line endX="329.33331298828125" layoutX="238.0" layoutY="30.0" startX="-207.33334350585938">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#1855a1" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="453.66668701171875" layoutX="115.0" layoutY="367.0" startX="-82.33334350585938">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#3170b7" />
+                  <Stop color="#f4faff" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="113.33331298828125" endY="113.5" layoutX="454.0" layoutY="254.0" startX="113.83331298828125" startY="-224.5">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#2267ac" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <Line endX="-105.83334350585938" endY="223.5" layoutX="138.0" layoutY="144.0" startX="-107.83334350585938" startY="-113.5">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0" startX="1.0">
+               <stops>
+                  <Stop color="#1855a1" />
+                  <Stop color="WHITE" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Line>
+      <ImageView fitHeight="89.0" fitWidth="111.0" layoutX="404.0" layoutY="63.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/icons8-doctor-60.png" />
+         </image>
+         <effect>
+            <DropShadow color="#4b91e5" height="163.33" radius="82.64750000000001" spread="0.29" width="169.26" />
+         </effect>
+      </ImageView>
+      <ImageView fitHeight="148.0" fitWidth="176.0" layoutX="449.0" layoutY="252.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/Doctor-pana%20(1).png" />
+         </image>
+         <effect>
+            <DropShadow color="#317ac4" height="202.86" radius="103.89500000000001" width="214.72" />
+         </effect>
+      </ImageView>
+      <TextField fx:id="phone" layoutX="341.0" layoutY="199.0" onAction="#handleRegistration" prefHeight="37.0" prefWidth="200.0" promptText="Telephone Number" />
+      <ImageView fitHeight="37.0" fitWidth="36.0" layoutX="40.0" layoutY="325.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Image/icons8-enter-80.png" />
+         </image>
+         <effect>
+            <DropShadow color="#469fdf" height="32.86" radius="19.8825" spread="0.08" width="48.67" />
+         </effect>
+      </ImageView>
+      <JFXButton layoutX="31.0" layoutY="326.0" minWidth="36.0" onAction="#returnLoginPage" onDragDetected="#returnLoginPage" opacity="0.0" prefHeight="35.0" prefWidth="35.0" ripplerFill="#afccdd" text=" " wrapText="true" />
+      <JFXComboBox fx:id="gender" focusColor="#4a9aef" layoutX="341.0" layoutY="243.0" onAction="#initialize" prefHeight="37.0" prefWidth="200.0" promptText="Gender" unFocusColor="#010910" />
+    </children>
+   <effect>
+      <DropShadow blurType="GAUSSIAN" color="#376bbf" radius="4.75" width="0.0" />
+   </effect>
+</AnchorPane>

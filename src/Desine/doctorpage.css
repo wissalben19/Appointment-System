@@ -1,0 +1,17 @@
+/* Add your CSS styles here */
+
+/* Example: Style for the circular image */
+.circular-image {
+    -fx-clip-radius: 50%;
+}
+
+/* Example: Style for the doctor name label */
+.doctor-name-label {
+    -fx-font-family: "Calisto MT Bold";
+    -fx-font-size: 17.0;
+    -fx-text-fill: white;
+}
+.jfx-button .jfx-rippler {
+    -jfx-rippler-fill: #2196F3; /* Set the fill color of the ripple effect */
+    -jfx-rippler-radius: 25; /* Set the radius of the ripple effect */
+}

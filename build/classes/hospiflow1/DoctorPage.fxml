@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<StackPane prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hospiflow1.DoctorPageController">
+   <children>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <top>
+                  <AnchorPane prefHeight="37.0" prefWidth="859.0" style="-fx-border-color: #64a5ff;">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="22.0" layoutX="14.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="213.0" AnchorPane.topAnchor="9.0">
+                           <image>
+                              <Image url="@../Image/icons8-hospital-64.png" />
+                           </image>
+                           <effect>
+                              <DropShadow color="#60a8f9" height="90.19" radius="53.489999999999995" spread="0.33" width="125.77" />
+                           </effect>
+                        </ImageView>
+                        <Label layoutX="52.0" layoutY="9.0" prefHeight="20.0" prefWidth="208.0" text="Hospital Management System" AnchorPane.bottomAnchor="8.0" AnchorPane.leftAnchor="52.0" AnchorPane.rightAnchor="840.0" AnchorPane.topAnchor="9.0">
+                           <font>
+                              <Font name="Agency FB Bold" size="16.0" />
+                           </font>
+                           <textFill>
+                              <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="0.692063504173642" startX="1.0">
+                                 <stops>
+                                    <Stop color="#388cdb" />
+                                    <Stop color="#0b3155" offset="1.0" />
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <AnchorPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #64a5ff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <GridPane layoutX="28.0" layoutY="246.0" prefHeight="244.0" prefWidth="140.0" AnchorPane.bottomAnchor="71.0" AnchorPane.leftAnchor="28.0" AnchorPane.rightAnchor="32.0" AnchorPane.topAnchor="246.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="129.33331298828125" minWidth="10.0" prefWidth="104.66668701171875" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../Image/icons8-person-64.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../Image/icons8-message-30.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+                                 <image>
+                                    <Image url="@../Image/icons8-calendar-50.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+                                 <image>
+                                    <Image url="@../Image/icons8-logout-50.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="23.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+                                 <image>
+                                    <Image url="@../Image/icons8-settings-50.png" />
+                                 </image>
+                              </ImageView>
+                              <JFXButton fx:id="User_Profile" onAction="#UserProfileButtonClick" prefHeight="35.0" prefWidth="91.0" ripplerFill="#3d86ed" style="-fx-background-color: #64a5ff; -fx-background-radius: 5; -fx-text-fill: white; -fx-font-size: 14;" text="User Profile" GridPane.columnIndex="1" />
+                              <JFXButton fx:id="Messages" prefHeight="35.0" prefWidth="90.0" ripplerFill="#3d86ed" style="-fx-background-color: #64a5ff; -fx-background-radius: 5; -fx-text-fill: white; -fx-font-size: 14;" text="Messages" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                              <JFXButton fx:id="Calendar" prefHeight="35.0" prefWidth="92.0" ripplerFill="#3d86ed" style="-fx-background-color: #64a5ff; -fx-background-radius: 5; -fx-text-fill: white; -fx-font-size: 14;" text="Calendar" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <JFXButton fx:id="Settings" prefHeight="35.0" prefWidth="95.0" ripplerFill="#3d86ed" style="-fx-background-color: #64a5ff; -fx-background-radius: 5; -fx-text-fill: white; -fx-font-size: 14;" text="Settings" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                              <JFXButton fx:id="Sing_Out" onAction="#SignOutButtonClick" prefHeight="35.0" prefWidth="92.0" ripplerFill="#3d86ed" style="-fx-background-color: #64a5ff; -fx-background-radius: 5; -fx-text-fill: white; -fx-font-size: 14;" text="Sing Out" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                           </children>
+                        </GridPane>
+                        <Line endX="51.33331298828125" endY="-1.52587890625E-5" layoutX="131.0" layoutY="13.0" startX="-112.0" startY="-1.52587890625E-5" stroke="#afd3ff" AnchorPane.bottomAnchor="546.5000152587891" AnchorPane.leftAnchor="17.83331298828125" AnchorPane.rightAnchor="17.16668701171875" AnchorPane.topAnchor="12.499984741210938" />
+                        <Line endX="66.66665649414062" layoutX="117.0" layoutY="220.0" startX="-100.0" stroke="#afd3ff" AnchorPane.bottomAnchor="339.5" AnchorPane.leftAnchor="16.166656494140625" AnchorPane.rightAnchor="15.833343505859375" AnchorPane.topAnchor="219.5" />
+                        <GridPane layoutX="17.0" layoutY="29.0" prefHeight="179.0" prefWidth="162.0">
+                           <columnConstraints>
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="110.3333740234375" minWidth="10.0" prefWidth="27.0" />
+                              <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" maxWidth="202.0" minWidth="10.0" prefWidth="202.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints maxHeight="144.33334350585938" minHeight="10.0" prefHeight="144.33334350585938" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="78.33331298828125" minHeight="10.0" prefHeight="25.666656494140625" valignment="CENTER" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <Label fx:id="DOCOTR_NAME" prefHeight="24.0" prefWidth="109.0" style="-fx-font-style: white;" text="Doctor Name" textFill="WHITE" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+                                 <font>
+                                    <Font name="AGA Arabesque" size="17.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="30.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+                                 <image>
+                                    <Image url="@../Image/icons8-active-48.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="medical_specialties" prefHeight="18.0" prefWidth="121.0" text="Medical Specialists" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                              <Circle fx:id="Photo_Profile" fill="#f6f8fb" radius="67.0" stroke="BLACK" strokeType="INSIDE" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="31.0" layoutY="507.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0">
+                           <image>
+                              <Image url="@../Image/icons8-help-40.png" />
+                           </image>
+                        </ImageView>
+                        <JFXButton layoutX="15.0" layoutY="518.0" minWidth="33.0" opacity="0.0" prefHeight="25.0" prefWidth="33.0" text=" " AnchorPane.bottomAnchor="17.0" AnchorPane.leftAnchor="17.0" />
+                     </children>
+                  </AnchorPane>
+               </left>
+               <center>
+                  <AnchorPane prefHeight="560.0" prefWidth="719.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="17.0" layoutY="14.0" prefHeight="115.0" prefWidth="650.0" style="-fx-background-color: #f6f8fb; -fx-background-radius: 5;" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="17.0" AnchorPane.topAnchor="14.0">
+                           <children>
+                              <AnchorPane layoutX="16.0" layoutY="23.0" prefHeight="65.0" prefWidth="195.0" style="-fx-border-color: #64a5ff; -fx-border-width: 2; -fx-background-radius: 5;" AnchorPane.bottomAnchor="25.0" AnchorPane.leftAnchor="15.0" AnchorPane.topAnchor="24.0">
+                                 <children>
+                                    <Label contentDisplay="RIGHT" graphicTextGap="8.0" layoutX="61.0" layoutY="14.0" prefHeight="18.0" prefWidth="130.0" text="Patients Today" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" wrapText="true" />
+                                    <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #64a5ff; -fx-background-radius: 5;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="139.0" AnchorPane.topAnchor="13.0">
+                                       <children>
+                                          <ImageView fitHeight="38.0" fitWidth="38.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <image>
+                                                <Image url="@../Image/icons8-shaking-50.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="61.0" layoutY="32.0" text="12" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="227.0" layoutY="24.0" prefHeight="65.0" prefWidth="195.0" style="-fx-border-color: #64a5ff; -fx-border-width: 2; -fx-background-radius: 5;" AnchorPane.bottomAnchor="25.0" AnchorPane.topAnchor="24.0">
+                                 <children>
+                                    <AnchorPane layoutX="14.0" layoutY="13.0" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #64a5ff; -fx-background-radius: 6;" AnchorPane.bottomAnchor="13.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="13.0">
+                                       <children>
+                                          <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="1.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <image>
+                                                <Image url="@../Image/icons8-group-32.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="63.0" layoutY="14.0" prefHeight="14.0" prefWidth="121.0" text="Total Patients" />
+                                    <Label layoutX="71.0" layoutY="33.0" text="30" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="435.0" layoutY="24.0" prefHeight="65.0" prefWidth="195.0" style="-fx-border-color: #64a5ff; -fx-border-width: 2; -fx-background-radius: 5;" AnchorPane.bottomAnchor="25.0" AnchorPane.rightAnchor="15.0" AnchorPane.topAnchor="24.0">
+                                 <children>
+                                    <AnchorPane layoutX="34.0" layoutY="20.0" prefHeight="38.0" prefWidth="38.0" style="-fx-background-color: #64a5ff; -fx-background-radius: 5;" AnchorPane.bottomAnchor="9.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="13.0">
+                                       <children>
+                                          <ImageView fitHeight="38.0" fitWidth="38.0" layoutX="-4.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                             <image>
+                                                <Image url="@../Image/icons8-appointments-64.png" />
+                                             </image>
+                                          </ImageView>
+                                       </children>
+                                    </AnchorPane>
+                                    <Label layoutX="60.0" layoutY="14.0" text="Today Appointments" />
+                                    <Label layoutX="60.0" layoutY="36.0" text="22" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <ScrollPane layoutX="19.0" layoutY="341.0" prefHeight="200.0" prefWidth="645.0" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="11.0" AnchorPane.topAnchor="341.0">
+                           <content>
+                              <AnchorPane prefHeight="1000.0" prefWidth="822.0" style="-fx-background-color: #f6f8fb;">
+                                 <children>
+                                    <TableView layoutX="73.0" layoutY="21.0" prefHeight="1000.0" prefWidth="822.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                       <columns>
+                                          <TableColumn prefWidth="75.0" text="No" />
+                                          <TableColumn prefWidth="150.0" text="Firstname" />
+                                          <TableColumn prefWidth="150.0" text="Last name" />
+                                          <TableColumn prefWidth="100.0" text="Age" />
+                                          <TableColumn prefWidth="100.0" text="Status" />
+                                          <TableColumn prefWidth="100.0" text="Stting" />
+                                       </columns>
+                                    </TableView>
+                                 </children>
+                              </AnchorPane>
+                           </content>
+                        </ScrollPane>
+                        <AnchorPane layoutX="19.0" layoutY="140.0" prefHeight="191.0" prefWidth="240.0" style="-fx-border-color: #f6f8fb; -fx-background-radius: 5; -fx-border-width: 2; -fx-background-color: white;" AnchorPane.leftAnchor="11.0">
+                           <children>
+                              <Label layoutY="150.0" prefHeight="41.0" prefWidth="240.0" style="-fx-font-size: 20; -fx-background-color: white; -fx-background-radius: 6; -fx-text-fill: #0b3155;" text="Patient  Appointments" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" />
+                              <ImageView fitHeight="150.0" fitWidth="241.0" layoutX="2.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="2.0" AnchorPane.topAnchor="34.0">
+                                 <image>
+                                    <Image url="@../Image/Plano%20de%20fundo.jpeg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="414.0" layoutY="140.0" prefHeight="189.0" prefWidth="404.0" style="-fx-background-color: #f6f8fb; -fx-background-radius: 5; -fx-border-width: 2;" AnchorPane.leftAnchor="263.0" AnchorPane.rightAnchor="11.0">
+                           <children>
+                              <AreaChart layoutX="-81.0" layoutY="24.0" prefHeight="165.0" prefWidth="404.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="24.0">
+                                 <xAxis>
+                                    <CategoryAxis side="BOTTOM" />
+                                 </xAxis>
+                                 <yAxis>
+                                    <NumberAxis side="LEFT" />
+                                 </yAxis>
+                              </AreaChart>
+                              <Label layoutX="34.0" layoutY="16.0" prefHeight="25.0" prefWidth="404.0" style="-fx-background-color: white; -fx-font-size: 20; -fx-background-radius: 6; -fx-text-fill: #111c2f#0b3155; -fx-border-color: #f6f8fb;" text="Pantient Activity" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </center>
+               <right>
+                  <AnchorPane prefHeight="563.0" prefWidth="222.0" style="-fx-border-color: #64a5ff;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane layoutX="14.0" layoutY="17.0" prefHeight="262.0" prefWidth="196.0" style="-fx-background-color: #f6f8fb;" AnchorPane.bottomAnchor="283.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="16.0">
+                           <children>
+                              <ImageView fitHeight="263.0" fitWidth="183.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+                                 <image>
+                                    <Image url="@../Image/download.jpeg" />
+                                 </image>
+                              </ImageView>
+                           </children></AnchorPane>
+                        <AnchorPane layoutX="14.0" layoutY="236.0" prefHeight="260.0" prefWidth="196.0" style="-fx-background-color: #f6f8fb;" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+                           <children>
+                              <ImageView fitHeight="194.0" fitWidth="243.0" layoutX="-3.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <image>
+                                    <Image url="@../Image/prescription.png" />
+                                 </image>
+                              </ImageView>
+                              <Label layoutX="48.0" layoutY="31.0" prefHeight="36.0" prefWidth="194.0" style="-fx-font-size: 22; -fx-text-fill: #388cdb; -fx-font-family: AGA Arabesque;" text="Write a prescription" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <effect>
+                                    <DropShadow color="#347bcd" height="19.03" radius="19.3925" width="60.54" />
+                                 </effect>
+                              </Label>
+                              <Label layoutX="26.0" layoutY="34.0" prefHeight="39.0" prefWidth="194.0" style="-fx-text-fill: #0b3155; -fx-font-size: 16; -fx-font-family: AGA Arabesque;" text="for patients" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                 <effect>
+                                    <DropShadow color="#2e81b9" height="60.53" radius="35.697500000000005" width="84.26" />
+                                 </effect>
+                              </Label>
+                              <JFXButton layoutX="126.0" layoutY="35.0" minWidth="26.0" prefHeight="37.0" prefWidth="68.0" style="-fx-background-color: #388cdb; -fx-background-radius: 8; -fx-text-fill: white;" text="Write" AnchorPane.rightAnchor="10.0" />
+                           </children></AnchorPane>
+                     </children>
+                  </AnchorPane>
+               </right>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

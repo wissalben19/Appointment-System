@@ -1,0 +1,8 @@
+/* styles.css */
+
+
+.createAccountButton {
+    -fx-background-color: linear-gradient(to bottom right,#188ba7,#306090);
+    -fx-text-fill: white; 
+    -fx-font-size: 14px; 
+}

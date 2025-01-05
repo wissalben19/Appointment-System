@@ -1,0 +1,27 @@
+/* doctor-sign-in.css */
+
+
+
+.title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+HBox, VBox {
+    -fx-alignment: CENTER;
+}
+
+
+
+
+ImageView {
+    -fx-border-color: #ddd;
+    -fx-border-width: 1px;
+    -fx-border-radius: 5px;
+}
+
+.createAccountButton {
+    -fx-background-color: linear-gradient(to bottom right,#188ba7,#306090);
+    -fx-text-fill: white; 
+    -fx-font-size: 14px; 
+}
